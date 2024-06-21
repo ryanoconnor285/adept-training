@@ -29,6 +29,6 @@ exports.askQuestion = async (req, res) => {
     const answer = await openAIService.getResponse(scenario, question);
     res.status(200).send({ answer });
   } catch (error) {
-    res.status(500).send({ error: 'Error getting response from OpenAI' });
+    res.status(500).send({ error: 'Error OpenAI' });
   }
 };

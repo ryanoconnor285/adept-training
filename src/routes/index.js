@@ -1,7 +1,10 @@
 const express = require('express');
-const router = express.Router();
-const scenarioRoutes = require('./scenario');
+const evaluatorRoutes = require('./evaluator');
+const candidateRoutes = require('./candidate');
 
-router.use('/scenarios', scenarioRoutes);
+const router = express.Router();
+
+router.use('/evaluator', evaluatorRoutes);
+router.use('/candidate', candidateRoutes);
 
 module.exports = router;
